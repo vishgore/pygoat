@@ -9,5 +9,5 @@ crispy_bootstrap4
 defusedxml==0.7.1
 dj-database-url==0.5.0
 Django==4.1.7
-django-allauth==0.52.0
+django-allauth==65.3.0
 django-crispy-forms==2.0
