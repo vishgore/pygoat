@@ -1,4 +1,5 @@
 import hashlib
+from ast import literal_eval
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseBadRequest, JsonResponse
 from .models import  FAANG, AF_session_id,info,login,comments,authLogin, tickits, sql_lab_table,Blogs,CF_user,AF_admin
@@ -448,7 +449,7 @@ def cmd_lab2(request):
             
             print(val)
             try:
-                output = eval(val)
+                output = literal_eval(val)
             except:
                 output = "Something went wrong"
                 return render(request,'Lab/CMD/cmd_lab2.html',{"output":output})
